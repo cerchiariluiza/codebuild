@@ -10,11 +10,11 @@ permissions:
     group: root
 hooks:
   ApplicationStop:
-    - location: scripts/ApplicationStop.sh
+    - location: aws/scripts/ApplicationStop.sh
       timeout: 120
       runas: root
   BeforeInstall:
-    - location: scripts/BeforeInstall.sh
+    - location: aws/scripts/BeforeInstall.sh
       timeout: 300
       runas: root
   AfterInstall:
@@ -22,6 +22,6 @@ hooks:
       timeout: 30
       runas: root
   ApplicationStart:
-    - location: scripts/ApplicationStart.sh
+    - location: aws/scripts/ApplicationStart.sh
       timeout: 120
       runas: root
